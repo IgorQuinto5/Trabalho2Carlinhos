@@ -18,9 +18,9 @@
             <nav>
                 <div class="logo">Igor Quinto</div>
                 <ul>
-                    <li><a href="https://institutojef.org.br/">Instituto J&F</a></li>
-                    <li><a href="https://www.instagram.com/itzz_igor.7/">Instagram</a></li>
-                    <li><a href="https://www.tiktok.com/@itz_igor.7">Tiktok</a></li>
+                    <li><a href="https://institutojef.org.br/" target="_blank">Instituto J&F</a></li>
+                    <li><a href="https://www.instagram.com/itzz_igor.7/" target="_blank">Instagram</a></li>
+                    <li><a href="https://www.tiktok.com/@itz_igor.7" target="_blank">Tiktok</a></li>
                     <button id="theme-toggle">🌞</button>
                 </ul>
             </nav>
@@ -225,35 +225,6 @@
             </div>
         </section>
         <section class="sections">
-            <h2 class="sectionsTitulo">Curiosidades Igor Quito</h2>
-            <ol type="I">
-                <li>Eu toco guitarra desde meus 11 anos.</li>
-                <li>Já quebrei o braço 2 vezes (e acabei aprendendo a escrever com a mão esquerda por conta disto).</li>
-                <li>Tenho "Quinto" no nome mas não sou o Quinto Igor da família kkkkk</li>
-                <li>Nasci.</li>
-                <li>Aprendi programação pelo Germinare.</li>
-            </ol>
-        </section>
-        <section class="sections">
-            <h2 class="sectionsTitulo">Lugares que já conheci 🌎</h2>
-            <ol type="1">
-                <li>São Paulo - SP</li>
-                <li>Natal - RN</li>
-                <li>Porto de galinhas - PE</li>
-                <li>Argentina</li>
-            </ol>
-        </section>
-
-        <section class="sections">
-            <h2 class="sectionsTitulo">Lugares que quero conhecer ✈️</h2>
-            <ul>
-                <li>Cancún - México</li>
-                <li>Orlando - EUA</li>
-                <li>Florença - Itália</li>
-                <li>Berlim - Alemanha</li>
-            </ul>
-        </section>
-        <section class="sections">
             <h2 class="sectionsTitulo">Minha tragetória 🌄</h2>
             <div class="divafinal">
                 <p>
@@ -278,12 +249,15 @@
             <h2 class="sectionsTitulo">Vídeos das minhas músicas favoritas 🎵</h2>
             <div class="divafinal">
                 <div>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/tAGnKpE4NCI?si=Q4gxT6uNXWud4qAX"
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/tAGnKpE4NCI?si=yNXckm-CeB1lUYz-"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/KfMZ6QImHnM?si=SH2RY53SUCtxvMeE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Gg-tkMSUzW4?si=UMbAEoAZBNrGOi5I"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/flOL05vT9aI?si=PseCLMUf9IZWCs1y"
                         title="YouTube video player" frameborder="0"
@@ -293,9 +267,11 @@
                 <div>
                     <p id="p">
                         Aqui estão o vídeo das músicas faladas anteriormente ("Nothing <br>
-                        Else Matters", "Stil loving you", "Hail to the king"). Se tiverem <br>
+                        Else Matters", "Send Me an Angel", "Hail to the king"). Se tiverem <br>
                         oportunidade para ouvir, eu recomendo, curto bastante essas músicas <br>
-                        e são clássicas do genêro do rock.
+                        e são clássicas do genêro do rock. Eu criei até um site de música com todas <br>
+                        as músicas da minha banda favorita: <a href="https://igorquinto5.github.io/Site-de-m-sica/"
+                            class="link-site">Metallica Site</a>
                     </p>
                 </div>
             </div>
@@ -402,12 +378,45 @@
                 <a href="https://github.com/IgorQuinto5"><i class="fab fa-github icon"></i></a>
             </li>
         </ul>
-        <button id="back-to-top" title="Voltar ao topo">Voltar ao topo</button>
+        <a href="../index.html" id="a-back">
+            <button id="back" title="Voltar">Voltar</button>
+        </a>
     </main>
 
     <footer>
         <div class="Menu">
-            <p id="pDoFooter">&copy; O maior Quinto Quinto do Brasil</p>
+            <p id="pDoFooter">&copy; O maior Quinto Quinto do Mundo</p>
         </div>
     </footer>
 </body>
+<script>
+    const toggle = document.getElementById('theme-toggle');
+    toggle.addEventListener('click', () => {
+        document.documentElement.classList.toggle('light-theme');
+        toggle.textContent = document.documentElement.classList.contains('light-theme') ? '🌙' : '🌞';
+    });
+
+    const iframes = [
+        `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7HKRWMTErKh56EIBeFcmdf?utm_source=generator&autoplay=1" width="100%" height="150" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`,
+        `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/018zT8xThRbMH2QeUoMlKQ?utm_source=generator&autoplay=1" width="100%" height="150" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`,
+        `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5anCkDvJ17aznvK5TED5uo?utm_source=generator&autoplay=1" width="100%" height="150" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`,
+        `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1BLfQ6dPXmuDrFmbdfW7Jl?utm_source=generator&autoplay=1" width="100%" height="150" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`,
+        `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7zAt4tdL44D3VuzsvM0N8n?utm_source=generator&autoplay=1" width="100%" height="150" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`,
+        `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2MuWTIM3b0YEAskbeeFE1i?utm_source=generator&autoplay=1" width="100%" height="150" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`,
+        `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3DwQ7AH3xGD9h65ezslm6q?utm_source=generator&autoplay=1" width="100%" height="150" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`,
+        `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6QAsrXPnMSXIbV0yEJHlEX?utm_source=generator&autoplay=1" width="100%" height="150" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`,
+        `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2O7UGwJPVlix15Wn4sa5vw?utm_source=generator&autoplay=1" width="100%" height="150" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`,
+        `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2dXsILW8gzkosqleHAvl0v?utm_source=generator&autoplay=1" width="100%" height="150" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`,
+        `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5lqyqPU3JkpCbUbLmTVQPW?utm_source=generator&autoplay=1" width="100%" height="150" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`,
+        `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5nekfiTN45vlxG0eNJQQye?utm_source=generator&autoplay=1" width="100%" height="150" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`,
+        `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6nswV1Lz3OZkaiCJfmVUOa?utm_source=generator&autoplay=1" width="100%" height="150" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`,
+        `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2R6UrJ8uWbSIiHWmvRQvN8?utm_source=generator&autoplay=1" width="100%" height="150" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`,
+        `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/28WmNsclKsrVmdv3tDmoYU?utm_source=generator&autoplay=1" width="100%" height="150" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`,
+        `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1aXFBWnnPFRKUN7vuIA5h0?utm_source=generator&autoplay=1" width="100%" height="150" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`
+    ];
+
+    const index = Math.floor(Math.random() * iframes.length);
+    document.getElementById("musica-container").innerHTML = iframes[index];
+</script>
+
+</html>
