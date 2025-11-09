@@ -137,7 +137,7 @@ div:not(.banner) {
     cursor: pointer;
     margin-left: 10px;
     font-size: 18px;
-    width: 100px;
+    width: 200px;
 }
 
 .logout-btn:hover {
