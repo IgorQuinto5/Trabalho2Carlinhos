@@ -1,9 +1,11 @@
+/* Reset e configurações globais */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Container da música do Spotify */
 #musica-container {
     position: fixed;
     bottom: 60px;
@@ -15,6 +17,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, .5);
 }
 
+/* Variáveis CSS para tema escuro (padrão) */
 :root {
     --bg-primary: #111;
     --bg-secondary: #1a1a1a;
@@ -30,6 +33,7 @@
     --transition: 0.2s ease-in-out;
 }
 
+/* Variáveis CSS para tema claro */
 .light-theme {
     --bg-primary: #bebebe;
     --bg-secondary: #fff;
@@ -43,33 +47,39 @@
     --button-bg: #1a1a1a;
 }
 
+/* Estilos do corpo */
 body {
     background: var(--bg-primary);
     color: var(--text-primary);
     font-family: 'Segoe UI', Tahoma, sans-serif;
 }
 
+/* Cores de header e footer */
 header,
 footer {
     background: var(--bg-secondary);
 }
 
+/* Cores do header */
 header,
 header .logo,
 header nav ul li a {
     color: var(--header-text);
 }
 
+/* Logo clicável */
 .logo {
     cursor: pointer;
 }
 
+/* Efeito hover nos itens de navegação */
 nav li:hover {
     background: var(--accent);
     color: var(--bg-primary);
     transition: background var(--transition);
 }
 
+/* Botão de alternar tema */
 #theme-toggle {
     position: fixed;
     top: var(--toggle-knob-rigth);
@@ -78,7 +88,6 @@ nav li:hover {
     height: 3rem;
     font-size: 1.5rem;
     background: var(--button-bg);
-    ;
     color: var(--text-primary);
     border: none;
     border-radius: 0.5rem;
@@ -87,37 +96,44 @@ nav li:hover {
     margin-right: 30px;
 }
 
+/* Efeito hover no botão de tema */
 #theme-toggle:hover {
     transform: scale(1.1);
 }
 
+/* Links */
 a {
     text-decoration: none;
     color: inherit;
 }
 
+/* Imagens */
 img {
     max-width: 100%;
     display: block;
 }
 
+/* Container principal */
 .Menu {
     max-width: 1200px;
     margin: 0 auto;
     padding: 1rem;
 }
 
+/* Header e footer */
 header,
 footer {
     background: #1a1a1a;
 }
 
+/* Header fixo */
 header {
     position: sticky;
     top: 0;
     z-index: 10;
 }
 
+/* Navegação */
 nav {
     display: flex;
     justify-content: space-between;
@@ -126,17 +142,20 @@ nav {
     margin-right: 100px;
 }
 
+/* Estilo do logo */
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
     color: #b4b4b4;
 }
 
+/* Lista de navegação */
 nav ul {
     display: flex;
     gap: 1rem;
 }
 
+/* Itens da lista de navegação */
 nav li {
     list-style: none;
     padding: 0.5rem 1rem;
@@ -144,16 +163,19 @@ nav li {
     transition: background 0.2s;
 }
 
+/* Efeito hover nos itens de navegação */
 nav li:hover {
     background: #b4b4b4;
     color: #111;
     border-radius: 4px;
 }
 
+/* Cor do link no hover */
 header nav ul li:hover a {
     color: black;
 }
 
+/* Seção hero (não utilizada no HTML atual) */
 .hero {
     position: relative;
     height: 50vh;
@@ -184,10 +206,12 @@ header nav ul li:hover a {
     font-size: 1.2rem;
 }
 
+/* Seções de conteúdo */
 .sections {
     margin: 2rem 0;
 }
 
+/* Títulos das seções */
 .sectionsTitulo {
     font-size: 2rem;
     margin-bottom: 2rem;
@@ -197,6 +221,7 @@ header nav ul li:hover a {
     padding-bottom: 7px;
 }
 
+/* Grid para seções com 3 imagens */
 .diva {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 250px));
@@ -204,6 +229,7 @@ header nav ul li:hover a {
     gap: 1rem;
 }
 
+/* Grid para seções finais com vídeos */
 .divafinal {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(1000px, 1000px));
@@ -213,6 +239,7 @@ header nav ul li:hover a {
     justify-content: space-around;
 }
 
+/* Banner de imagens */
 .banner {
     background: #1a1a1a;
     border-radius: 8px;
@@ -221,16 +248,19 @@ header nav ul li:hover a {
     transition: transform 0.2s;
 }
 
+/* Efeito hover nos banners */
 .banner:hover {
     transform: scale(1.03);
 }
 
+/* Imagens dentro dos banners */
 .banner img {
     width: 100%;
     height: 200px;
     object-fit: cover;
 }
 
+/* Rodapé */
 footer {
     padding: 2rem 1rem;
     text-align: center;
@@ -239,6 +269,7 @@ footer {
     cursor: pointer;
 }
 
+/* Efeitos hover no rodapé e logo */
 #pDoFooter:hover {
     color: #565151;
 }
@@ -247,6 +278,7 @@ footer {
     color: #565151;
 }
 
+/* Posicionamento dos parágrafos nas seções de vídeo */
 #p {
     margin-left: -555px;
     margin-top: 430px;
@@ -257,13 +289,13 @@ footer {
     margin-top: 425px;
 }
 
+/* Redes sociais */
 ul.box-redes-sociais {
     display: flex;
     background: transparent;
     width: 305px;
     float: none;
     margin: auto;
-
 }
 
 ul.box-redes-sociais li {
@@ -271,9 +303,8 @@ ul.box-redes-sociais li {
     margin: auto;
 }
 
-
+/* Links das redes sociais */
 ul.box-redes-sociais li a {
-
     width: 50px;
     height: 50px;
     background-color: #fff;
@@ -289,6 +320,7 @@ ul.box-redes-sociais li a {
     z-index: 1;
 }
 
+/* Ícones das redes sociais */
 ul.box-redes-sociais li a .icon {
     position: relative;
     color: #262626;
@@ -296,11 +328,13 @@ ul.box-redes-sociais li a .icon {
     z-index: 3;
 }
 
+/* Efeito hover nos ícones */
 ul.box-redes-sociais li a:hover .icon {
     color: #fff;
     transform: scale(1.2);
 }
 
+/* Efeito de preenchimento nas redes sociais */
 ul.box-redes-sociais li a:before {
     content: "";
     position: absolute;
@@ -313,10 +347,12 @@ ul.box-redes-sociais li a:before {
     z-index: 2;
 }
 
+/* Efeito hover no preenchimento */
 ul.box-redes-sociais li a:hover:before {
     top: 0;
 }
 
+/* Cores específicas para cada rede social */
 ul.box-redes-sociais li.facebook a:before {
     background: #3b5999;
 }
@@ -350,6 +386,7 @@ ul.box-redes-sociais li.github a:hover .icon {
     color: white;
 }
 
+/* Botão de voltar/Netflix */
 #back {
     position: fixed;
     bottom: 20px;
@@ -368,6 +405,7 @@ ul.box-redes-sociais li.github a:hover .icon {
     transition: all 0.3s ease;
 }
 
+/* Efeito hover no botão */
 #back:hover {
     background: var(--text-primary);
     color: var(--bg-primary);
@@ -375,12 +413,13 @@ ul.box-redes-sociais li.github a:hover .icon {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
+/* Links personalizados */
 .link-site {
-    color:rgb(88, 88, 255);
+    color: rgb(88, 88, 255);
     text-decoration: underline;
     cursor: pointer;
 }
 
 .link-site:hover {
-    color:rgb(36, 36, 247);
+    color: rgb(36, 36, 247);
 }
