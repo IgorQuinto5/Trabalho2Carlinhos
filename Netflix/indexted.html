@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ted - Igorflix</title>
+    <link rel="shortcut icon" href="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/215697c1-f019-46c9-9268-869c8726107c/d77mnay-e06c6eef-e8d7-4b54-9cfd-8b98110395a6.png/v1/fill/w_1280,h_1280/metallica___through_the_never_logo_by_lightsinaugust_d77mnay-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiJcL2ZcLzIxNTY5N2MxLWYwMTktNDZjOS05MjY4LTg2OWM4NzI2MTA3Y1wvZDc3bW5heS1lMDZjNmVlZi1lOGQ3LTRiNTQtOWNmZC04Yjk4MTEwMzk1YTYucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.k0PCCwNUWYcNrgaM3CAQOor1bg6OhPpNZgypl5sziSY" type="image/x-icon">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+        }
+
+        .banner {
+            position: relative;
+            background-color: #111;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .logo {
+            width: 200px;
+        }
+
+        .language-btn,
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            background: transparent;
+            border: 1px solid #999;
+            color: #999;
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+
+        .language-btn {
+            right: 20px;
+        }
+
+        .back-btn {
+            left: 20px;
+        }
+
+        .detail {
+            padding: 40px;
+        }
+
+        .detail-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .detail-img {
+            width: 300px;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        .sinopse {
+            max-width: 600px;
+        }
+
+        .sinopse h2 {
+            color: #e50914;
+            margin-top: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #111;
+            font-size: 14px;
+            color: #999;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="banner">
+        <img src="IGORFLIX-01-05-2025.png" alt="Logo Igorflix" class="logo">
+        <button class="back-btn" onclick="window.history.back()" data-pt="Back" data-en="Voltar">Voltar</button>
+        <button class="language-btn" data-pt="Portuguese" data-en="Inglês">English</button>
+    </div>
+
+    <main>
+        <section class="detail">
+            <h1 data-pt="Ted" data-en="Ted">Ted</h1>
+            <div class="detail-content">
+                <img src="https://br.web.img3.acsta.net/medias/nmedia/18/91/00/23/20238224.jpg"
+                    alt="Ted" class="detail-img">
+                <div class="sinopse">
+                    <h2 data-pt="Sinopse" data-en="Synopsis">Sinopse</h2>
+                    <p data-pt="John Bennett é um homem que tem um urso de pelúcia chamado Ted, que ganhou vida devido a um desejo mágico quando criança. Agora adulto, John tenta equilibrar a sua vida com a namorada Lori e seu inseparável amigo Ted, que ainda se comporta como uma criança travessa. Com muito humor e confusões, 'Ted' é uma comédia sobre amizade e maturidade." 
+                        data-en="John Bennett is a man who has a teddy bear named Ted, who came to life due to a magical wish when he was a child. Now an adult, John tries to balance his life with his girlfriend Lori and his inseparable friend Ted, who still behaves like a mischievous child. With plenty of humor and mishaps, 'Ted' is a comedy about friendship and maturity.">
+                        John Bennett é um homem que tem um urso de pelúcia chamado Ted, que ganhou vida devido a um desejo mágico quando criança. Agora adulto, John tenta equilibrar a sua vida com a namorada Lori e seu inseparável amigo Ted, que ainda se comporta como uma criança travessa. Com muito humor e confusões, 'Ted' é uma comédia sobre amizade e maturidade.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p data-pt="© 2025 Igorflix. Todos os direitos reservados." data-en="© 2025 Igorflix. All rights reserved.">©
+            2025 Igorflix. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        const btn = document.querySelector('.language-btn');
+        const backBtn = document.querySelector('.back-btn');
+        let idioma = localStorage.getItem('idioma') || 'pt';
+
+        function atualizarIdioma() {
+            document.querySelectorAll('[data-pt][data-en]').forEach(el => {
+                el.textContent = idioma === 'pt' ? el.getAttribute('data-pt') : el.getAttribute('data-en');
+            });
+            btn.textContent = idioma === 'pt' ? btn.getAttribute('data-en') : btn.getAttribute('data-pt');
+            backBtn.textContent = idioma === 'pt' ? backBtn.getAttribute('data-en') : backBtn.getAttribute('data-pt');
+        }
+
+        document.addEventListener('DOMContentLoaded', atualizarIdioma);
+
+        btn.addEventListener('click', () => {
+            idioma = idioma === 'pt' ? 'en' : 'pt';
+            localStorage.setItem('idioma', idioma);
+            atualizarIdioma();
+        });
+    </script>
+</body>
+
+</html>

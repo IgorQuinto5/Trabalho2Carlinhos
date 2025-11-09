@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Last of Us - Igorflix</title>
+    <link rel="shortcut icon" href="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/215697c1-f019-46c9-9268-869c8726107c/d77mnay-e06c6eef-e8d7-4b54-9cfd-8b98110395a6.png/v1/fill/w_1280,h_1280/metallica___through_the_never_logo_by_lightsinaugust_d77mnay-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiJcL2ZcLzIxNTY5N2MxLWYwMTktNDZjOS05MjY4LTg2OWM4NzI2MTA3Y1wvZDc3bW5heS1lMDZjNmVlZi1lOGQ3LTRiNTQtOWNmZC04Yjk4MTEwMzk1YTYucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.k0PCCwNUWYcNrgaM3CAQOor1bg6OhPpNZgypl5sziSY" type="image/x-icon">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+        }
+
+        .banner {
+            position: relative;
+            background-color: #111;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .logo {
+            width: 200px;
+        }
+
+        .language-btn,
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            background: transparent;
+            border: 1px solid #999;
+            color: #999;
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+
+        .language-btn {
+            right: 20px;
+        }
+
+        .back-btn {
+            left: 20px;
+        }
+
+        .detail {
+            padding: 40px;
+        }
+
+        .detail-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .detail-img {
+            width: 300px;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        .sinopse {
+            max-width: 600px;
+        }
+
+        .sinopse h2 {
+            color: #e50914;
+            margin-top: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #111;
+            font-size: 14px;
+            color: #999;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="banner">
+        <img src="IGORFLIX-01-05-2025.png" alt="Logo Igorflix" class="logo">
+        <button class="back-btn" onclick="window.history.back()" data-pt="Back" data-en="Voltar">Voltar</button>
+        <button class="language-btn" data-pt="Portuguese" data-en="Inglês">English</button>
+    </div>
+
+    <main>
+        <section class="detail">
+            <h1 data-pt="The Last of Us" data-en="The Last of Us">The Last of Us</h1>
+            <div class="detail-content">
+                <img src="https://cinepop.com.br/wp-content/uploads/2022/11/finkmlhvqaa1fb3__16l26o6f-760x1126-1.jpeg"
+                    alt="The Last of Us" class="detail-img">
+                <div class="sinopse">
+                    <h2 data-pt="Sinopse" data-en="Synopsis">Sinopse</h2>
+                    <p data-pt="Em um mundo pós-apocalíptico, uma pandemia causada por um fungo mutante devastou grande parte da população mundial. A história segue Joel, um homem endurecido pela tragédia, e Ellie, uma jovem aparentemente imune à infecção. Juntos, eles atravessam um país devastado por criaturas perigosas e sobreviventes hostis, enquanto buscam uma chance de salvar a humanidade. Com uma narrativa emocionante e personagens profundos, The Last of Us aborda temas como a luta pela sobrevivência, a natureza humana e os sacrifícios feitos em nome do amor e da esperança." 
+                        data-en="In a post-apocalyptic world, a pandemic caused by a mutant fungus has devastated much of the global population. The story follows Joel, a man hardened by tragedy, and Ellie, a young girl seemingly immune to the infection. Together, they journey across a country ravaged by dangerous creatures and hostile survivors, as they search for a chance to save humanity. With an emotional narrative and deep characters, The Last of Us explores themes of survival, human nature, and the sacrifices made in the name of love and hope.">
+                        Em um mundo pós-apocalíptico, uma pandemia causada por um fungo mutante devastou grande parte da população mundial. A história segue Joel, um homem endurecido pela tragédia, e Ellie, uma jovem aparentemente imune à infecção. Juntos, eles atravessam um país devastado por criaturas perigosas e sobreviventes hostis, enquanto buscam uma chance de salvar a humanidade. Com uma narrativa emocionante e personagens profundos, The Last of Us aborda temas como a luta pela sobrevivência, a natureza humana e os sacrifícios feitos em nome do amor e da esperança.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p data-pt="© 2025 Igorflix. Todos os direitos reservados." data-en="© 2025 Igorflix. All rights reserved.">©
+            2025 Igorflix. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        const btn = document.querySelector('.language-btn');
+        const backBtn = document.querySelector('.back-btn');
+        let idioma = localStorage.getItem('idioma') || 'pt';
+
+        function atualizarIdioma() {
+            document.querySelectorAll('[data-pt][data-en]').forEach(el => {
+                el.textContent = idioma === 'pt' ? el.getAttribute('data-pt') : el.getAttribute('data-en');
+            });
+            btn.textContent = idioma === 'pt' ? btn.getAttribute('data-en') : btn.getAttribute('data-pt');
+            backBtn.textContent = idioma === 'pt' ? backBtn.getAttribute('data-en') : backBtn.getAttribute('data-pt');
+        }
+
+        document.addEventListener('DOMContentLoaded', atualizarIdioma);
+
+        btn.addEventListener('click', () => {
+            idioma = idioma === 'pt' ? 'en' : 'pt';
+            localStorage.setItem('idioma', idioma);
+            atualizarIdioma();
+        });
+    </script>
+</body>
+
+</html>

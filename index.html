@@ -1,316 +1,422 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt">
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <title>Seleção de Perfil - Igorflix</title>
-    <link rel="shortcut icon"
-        href="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/215697c1-f019-46c9-9268-869c8726107c/d77mnay-e06c6eef-e8d7-4b54-9cfd-8b98110395a6.png/v1/fill/w_1280,h_1280/metallica___through_the_never_logo_by_lightsinaugust_d77mnay-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiJcL2ZcLzIxNTY5N2MxLWYwMTktNDZjOS05MjY4LTg2OWM4NzI2MTA3Y1wvZDc3bW5heS1lMDZjNmVlZi1lOGQ3LTRiNTQtOWNmZC04Yjk4MTEwMzk1YTYucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.k0PCCwNUWYcNrgaM3CAQOor1bg6OhPpNZgypl5sziSY"
-        type="image/x-icon">
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0
-        }
-
-        body {
-            background: #141414;
-            color: #fff;
-            font-family: 'Helvetica Neue', sans-serif;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh; 
-            position: relative;
-        }
-
-        header {
-            padding: 20px
-        }
-
-        header .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #e50914
-        }
-
-        #lang-btn {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: rgba(0, 0, 0, 0.5);
-            border: none;
-            color: white;
-            padding: 8px 12px;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        h1 {
-            text-align: center;
-            margin-top: 40px;
-            font-size: 32px;
-            font-weight: normal;
-        }
-
-        .profiles {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 30px; /* Espaço entre os itens */
-            margin: 40px auto;
-            max-width: 900px;
-        }
-
-        .profile {
-            background: #333;
-            width: 150px;
-            height: 150px;
-            border-radius: 8px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            position: relative;
-            transition: transform .2s;
-        }
-
-        .profile:hover {
-            transform: scale(1.05) /* Aumenta o tamanho */
-        }
-
-        .profile span {
-            font-size: 64px;
-            color: #fff;
-        }
-
-        .profile-label {
-            margin-top: 10px;
-            font-size: 16px;
-        }
-
-        /* Cores */
-        .Jeferson {
-            background: #357EDD
-        }
-
-        .Patrícia {
-            background: #074C4E
-        }
-
-        .Igor {
-            background: #E50914
-        }
-
-        .Arthur {
-            background: #FFC500
-        }
-
-        .Convidado {
-            background: #1DB954
-        }
-
-        #modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.75);
-            align-items: center;
-            justify-content: center;
-            z-index: 10;
-        }
-
-        #modal .box {
-            background: #222;
-            padding: 30px;
-            border-radius: 6px;
-            width: 320px;
-            position: relative;
-            text-align: center;
-        }
-
-        #modal .box h2 {
-            margin-bottom: 20px;
-            font-size: 20px;
-        }
-
-        #modal .box input {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 15px;
-            border: none;
-            border-radius: 4px;
-            background: #333;
-            color: #fff;
-        }
-
-        #modal .box button {
-            background: #e50914;
-            border: none;
-            padding: 10px 20px;
-            color: #fff;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        #modal .box .error {
-            color: #f44336;
-            margin-top: 10px;
-            font-size: 14px;
-            display: none;
-        }
-
-        #modal .box .close {
-            position: absolute;
-            top: 8px;
-            right: 12px;
-            background: none;
-            border: none;
-            color: #aaa;
-            font-size: 20px;
-            cursor: pointer;
-        }
-
-        #modal .box .close:hover {
-            color: #fff
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sobre o "Quinto"</title>
+    <link rel="shortcut icon" href="https://www.pngall.com/wp-content/uploads/15/Metallica-Logo-PNG-Picture.png"
+        type="image/x-icon" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="Trabalho sobre Eu Mesmo/style.css">
 </head>
 
 <body>
     <header>
-        <div class="logo">IGORFLIX</div>
+        <div class="container">
+            <nav>
+                <div class="logo">Igor Quinto</div>
+                <ul>
+                    <li><a href="https://institutojef.org.br/" target="_blank">Instituto J&F</a></li>
+                    <li><a href="https://www.instagram.com/itzz_igor.7/" target="_blank">Instagram</a></li>
+                    <li><a href="https://www.tiktok.com/@itz_igor.7" target="_blank">Tiktok</a></li>
+                    <button id="theme-toggle">🌞</button>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <button id="lang-btn">EN</button>
+    <div id="musica-container"></div>
 
-    <h1 data-pt="Quem está assistindo? - Entre com 'Germinare' no Igor" data-en="Who's watching? - Enter 'Germinare' on Igor">Quem está assistindo? - Entre com "Germinare" no Igor</h1>
 
-    <div class="profiles">
-        <div class="profile Jeferson" data-user="Jeferson"><span>😊</span>
-            <div class="profile-label">Jeferson</div>
+    <main class="Menu">
+        <section class="sections">
+            <h2 class="sectionsTitulo">Igor Quinto 🎸</h2>
+            <div class="diva">
+                <div class="banner"><img src="Trabalho sobre eu Mesmo/Images/Captura de tela 2025-05-13 115142.png"></div>
+                <div class="banner"><img src="Trabalho sobre eu Mesmo/Images/Captura de tela 2025-05-13 114925.png"></div>
+                <div class="banner"><img src="Trabalho sobre eu Mesmo/Images/Captura de tela 2025-05-13 115039.png"></div>
+                <p>
+                    <br>
+                    Olá, eu sou o Igor Eduardo Quinto, sou de São Paulo, programador e estudante da J&F, tenho 15 anos e
+                    gosto muito de video game, música, séries e filmes (de preferência de terror, comédia ou romance),
+                    entre outras coisas.
+                </p>
+            </div>
+        </section>
+
+        <section class="sections">
+            <h2 class="sectionsTitulo">Família ❤️</h2>
+            <div class="diva">
+                <div class="banner"><img src="Trabalho sobre eu Mesmo/Images/Captura de tela 2025-05-13 142235.png"></div>
+                <div class="banner"><img src="Trabalho sobre eu Mesmo/Images/Imagem do WhatsApp de 2025-02-26 à(s) 06.39.06_66b885ca.jpg"></div>
+                <div class="banner"><img src="Trabalho sobre eu Mesmo/Images/Imagem do WhatsApp de 2025-02-26 à(s) 22.20.44_b36c76e6.jpg"></div>
+                <p>
+                    <br>
+                    Meus pais tiveram 2 filhos incluindo eu, e sou o mais velho. Meus pai se chama "Jeferson", minha mãe
+                    "Patrícia" e meu irmão "Arthur", conhecidos como a família Quinto.
+                </p>
+            </div>
+        </section>
+
+        <section class="sections">
+            <h2 class="sectionsTitulo">Pets 🤍</h2>
+            <div class="diva">
+                <div class="banner"><img src="Trabalho sobre eu Mesmo/Images/Imagem do WhatsApp de 2025-02-26 à(s) 22.21.08_70663b09.jpg"></div>
+                <div class="banner"><img src="Trabalho sobre eu Mesmo/Images/Imagem do WhatsApp de 2025-02-26 à(s) 22.21.24_26d2c27d.jpg"></div>
+                <div class="banner"><img src="Trabalho sobre eu Mesmo/Images/foto pet1.jpg"></div>
+                <p>
+                    <br>
+                    <br>
+                    Eu na minha vida toda tive 2 pets, "Maggie" que infelizmente faleceu no ano de 2023 e agora tenho o
+                    "Lucky".
+                </p>
+            </div>
+        </section>
+
+        <section class="sections">
+            <h2 class="sectionsTitulo">Eu mais novo 🧸</h2>
+            <div class="diva">
+                <div class="banner"><img src="Trabalho sobre eu Mesmo/Images/foto bebe1.jpg"></div>
+                <div class="banner"><img src="Trabalho sobre eu Mesmo/Images/foto bebe2 .jpg"></div>
+                <div class="banner"><img src="Trabalho sobre eu Mesmo/Images/foto bebe 3.jpg"></div>
+                <p>
+                    <br>
+                    <br>
+                    <br>
+                    Aqui sou eu nas melhores fases da vida, uma época onde se vive na inocência e brincadeiras sem
+                    parar.
+                </p>
+            </div>
+        </section>
+
+        <section class="sections">
+            <h2 class="sectionsTitulo">Amigos 🤝🏻</h2>
+            <div class="diva">
+                <div class="banner"><img src="Trabalho sobre eu Mesmo/Images/Imagem do WhatsApp de 2025-02-26 à(s) 06.33.28_ac08b837.jpg"></div>
+                <div class="banner"><img src="Trabalho sobre eu Mesmo/Images/Captura de tela 2025-02-26 225026.png"></div>
+                <div class="banner"><img src="Trabalho sobre eu Mesmo/Images/Imagem do WhatsApp de 2025-02-26 à(s) 06.33.27_5cbb516e.jpg"></div>
+                <p>
+                    Aqui sou eu e meus amigos da minha escola antiga, a maioria deles eu levava uma amizade de mais de 4
+                    anos, sempre bate uma saudadizinha. Acho que um dos melhores momentos entre nós foi a viagem de
+                    formatura, 4 dias muito incríveis e principalmente as festas de madrugada.
+                </p>
+            </div>
+        </section>
+
+        <section class="sections">
+            <h2 class="sectionsTitulo">Amigos do Instituto 😜</h2>
+            <div class="diva">
+                <div class="banner"><img src="Trabalho sobre eu Mesmo/Images/WIN_20250414_10_33_33_Pro.jpg"></div>
+                <div class="banner"><img src="Trabalho sobre eu Mesmo/Images/Imagem do WhatsApp de 2025-04-24 à(s) 15.56.08_da86d555.jpg"></div>
+                <div class="banner"><img src="Trabalho sobre eu Mesmo/Images//colocarNoSite.jpg"></div>
+                <p>
+                    <br>
+                    Eu e meus amigos no ano em que entrei na escola do instituto J&F (2025), eu conheci aqui muita gente
+                    legal e muito daora mesmo, agradeço por estar aqui no primeiro ano TECH com o J.
+                </p>
+            </div>
+        </section>
+        <section class="sections">
+            <h2 class="sectionsTitulo">Instituo J&F 💻</h2>
+            <div class="diva">
+                <div class="banner"><img src="https://static.poder360.com.br/2023/06/DSC_1599-848x477.jpg"></div>
+                <div class="banner"><img
+                        src="https://institutojef.org.br/wp-content/uploads/2023/05/img-infraestrutura-2.png"></div>
+                <div class="banner"><img src="https://static.poder360.com.br/2023/06/DSC_1517-848x477.jpg"></div>
+                <p>
+                    <br>
+                    O Instituto J&F é o braço educacional do Grupo J&F, configurado como um “Centro de Educação para os
+                    Negócios” cujo propósito é transformar empresas em Empresas Educadoras, fico muito feliz por estar
+                    servindo a empresa.
+                </p>
+            </div>
+        </section>
+        <section class="sections">
+            <h2 class="sectionsTitulo">Me inspiro 💡</h2>
+            <div class="diva">
+                <div class="banner"><img
+                        src="https://files.sunoresearch.com.br/p/uploads/2019/03/joesley-batista-3.jpg"></div>
+                <div class="banner"><img src="Trabalho sobre eu Mesmo/Images/EDITAR JAMES.jpg"></div>
+                <div class="banner"><img
+                        src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTfJlJcwyyD8Dv6LuFXi4fGxVOTp48V4O0iXFy-DCrsYIzqdVbz8N--sr86MM812S__r8huZQTuz4kTLlMnYVVPGQ">
+                </div>
+                <p>
+                    Na imagem a esquerda temos "Joesley Batista", proprietário da J&F. No meio "James Hetfield" e "Kirk
+                    Hammett", cantor/guitarrista e guitarrista do Metallica respectivamente, e por fim, a direita,
+                    "CR7", na qual é jogador de futebol, porém o que me insipiro mesmo é em sua determinação.
+                </p>
+            </div>
+        </section>
+        <section class="sections">
+            <h2 class="sectionsTitulo">Músicas favoritas 🎵</h2>
+            <div class="diva">
+                <div class="banner"><img src="https://i.ytimg.com/vi/vubX-MhZ3YM/sddefault.jpg"></div>
+                <div class="banner"><img
+                        src="https://upload.wikimedia.org/wikipedia/en/8/83/Scorpions-stilllovingyou1.jpg"></div>
+                <div class="banner"><img src="https://upload.wikimedia.org/wikipedia/pt/1/19/Hail-to-the-king-capa.jpg">
+                </div>
+                <p>
+                    E por fim a música, uma das coisas que eu mais amo na vida, acho louco como é pensada a criação da
+                    música, sem contar sua complexidade e tudo mais, entre elas minhas preferidas são "Nothing else
+                    matters" (na qual é a que vai tocar em meu casamento kkkkkkk), "Stil loving you" e "Hail to the
+                    king".
+                </p>
+            </div>
+        </section>
+        <section class="sections">
+            <h2 class="sectionsTitulo">Famosos que acompanho ▶️</h2>
+            <div class="diva">
+                <div class="banner"><img
+                        src="https://pt.quizur.com/_image?href=https://img.quizur.com/f/img6439931eb1a801.65317098.jpg?lastEdited=1681494820&w=600&h=600&f=webp">
+                </div>
+                <div class="banner"><img
+                        src="https://yt3.googleusercontent.com/8GS3zVxbxpHUqd7emCb87um7NvwYaGpswBYGerrK8q_ZmMXHvbvkqwoWX6dLxN9VTUHwEFKi=s900-c-k-c0x00ffffff-no-rj">
+                </div>
+                <div class="banner"><img
+                        src="https://i.ytimg.com/vi/RFBxmqpF570/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDTQjGeJz83fpQhcwz1shfFpTLg9Q">
+                </div>
+                <p>
+                    Para descontrair acho muito legal assistir alguns canais do youtube, entre eles amo assistir o
+                    "Alanzoka", que produz vídeos de jogo de video-game, "Peixinho" que atualmente produz vídeos de
+                    "Estoure o balão ou encontre seu amor" e o "Gabriel e o Vinnie" vídeos de comédia.
+                </p>
+            </div>
+        </section>
+        <section class="sections">
+            <h2 class="sectionsTitulo">Time do coração 💚</h2>
+            <div class="diva">
+                <div class="banner"><img
+                        src="https://lojapalmeiras.vtexassets.com/arquivos/ids/190217/782425_01_dt01.jpg.jpg?v=638804071626600000">
+                </div>
+                <div class="banner"><img
+                        src="https://fly.metroimg.com/upload/q_85,w_700/https://uploads.metroimg.com/wp-content/uploads/2025/04/21145946/palmeiras-fortaleza-gringos-gols-brasileirao.jpg">
+                </div>
+                <div class="banner"><img
+                        src="https://cdn.comunhao.com.br/wp-content/uploads/2023/06/Fz174kgWAAAMlAE-1.jpg">
+                </div>
+                <p>
+                    Acho que não tinha como deixar isso de fora né, o time do coração... <br>
+                    Meu time do coração é o verdão, eu sou palmeirense desde que nasci e acomanho bastante futebol,
+                    sempre que tem jogo estou lá assistindo. <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avanti,
+                    Palestra! <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;💚💚💚
+                </p>
+            </div>
+        </section>
+        <section class="sections">
+            <h2 class="sectionsTitulo">Metallica 🤘🏻</h2>
+            <div class="diva">
+                <div class="banner"><img
+                        src="https://www.mundometalbr.com/wp-content/uploads/2025/01/Metallica-eu-sei-que-individualmente-somos-todos-musicos-realmente-medianos-diz-James-Hetfield-1024x576.jpg">
+                </div>
+                <div class="banner"><img
+                        src="https://www.hollywoodreporter.com/wp-content/uploads/2025/04/hammett-2.jpg?crop=0px%2C115px%2C3690px%2C2065px&resize=2000%2C1126">
+                </div>
+                <div class="banner"><img src="https://rollingstone.com.br/wp-content/uploads/metallica_ross_halfin_rs_brasil.jpg">
+                </div>
+                <p>
+                    Aí está a banda do meu coração, "Metallica", eu comecei a começar a ouvir música mesmo, depois de
+                    ouvir o próprio Metallica pela primeira vez, quem me conhece muito bem sabe que eu sou bem fanático
+                    neles, pretendo ir em um dia nos show deles ainda, mas no dia atual não ocorreu esta oportunidade.
+                </p>
+            </div>
+        </section>
+        <section class="sections">
+            <h2 class="sectionsTitulo">Minha tragetória 🌄</h2>
+            <div class="divafinal">
+                <p>
+                    Agora falarei um pouco sobre minha história na Instituto J&F no TECH. Antes de entrar aqui eu nunca
+                    imaginava que ia seguir para esta parte de programação, eu antes tive uma época que eu mexia com
+                    robô, eu lembro que meu robô que eu mais gostei de ter criado foi um carro de corrida, usei um
+                    software para conseguir movimentar o carro e me lembro de ir aprsentar todo tímido pro ensino médio
+                    da escola (o professor tinha pedido para eu fazer isso infelizmente kkkkkk). <br>
+                    Meu pai ele trabalha na empresa da JBS, e com isso conhecia bem o Instituto, com isso decidi fazer
+                    as etapas para entrar na escola, e nem sabia que durante as etapas teria um curso preparatório, o
+                    curso me demonstrou que eu realmente gostaria de seguir isso como um plano futuro, percebi que era
+                    muito legal programar por mais de suas complexidades. <br> Quando recebi o comunicado de que entrei
+                    na escola fiquei muito feliz e fico agradecido por ter entrado aqui!
+                    Aqui dentro da escola acredito estar indo bem, por mais que tenha uma nota ou outra meio baixa, acho
+                    que está tudo certo, conheci um pessoal novo muito legal, os professores são incríveise o ensino
+                    muito bom, obrigado Instituo J&F!
+                    <br><br><br><br>
+                </p>
+            </div>
+        </section>
+        <section class="sections">
+            <h2 class="sectionsTitulo">Vídeos das minhas músicas favoritas 🎵</h2>
+            <div class="divafinal">
+                <div>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/tAGnKpE4NCI?si=yNXckm-CeB1lUYz-"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Gg-tkMSUzW4?si=UMbAEoAZBNrGOi5I"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/flOL05vT9aI?si=PseCLMUf9IZWCs1y"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div>
+                    <p id="p">
+                        Aqui estão o vídeo das músicas faladas anteriormente ("Nothing <br>
+                        Else Matters", "Send Me an Angel", "Hail to the king"). Se tiverem <br>
+                        oportunidade para ouvir, eu recomendo, curto bastante essas músicas <br>
+                        e são clássicas do genêro do rock. Eu criei até um site de música com todas <br>
+                        as músicas da minha banda favorita: <a href="https://igorquinto5.github.io/Site-de-m-sica/"
+                            class="link-site">Metallica Site</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="sections">
+            <h2 class="sectionsTitulo">Um vídeo dos famosos que gosto de acompanhar ▶️</h2>
+            <div class="divafinal">
+                <div>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/XqepZnGA09Q?si=PuxLwdFs2g0RB1l_"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ZyHN0v1LOQg?si=1g7QY3_MUvW3b4Jd"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/RFBxmqpF570?si=fATY5BVg6Z_Lyzmo"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div>
+                    <p id="p">
+                        Aqui estão famosos que gosto de acompanhar ("Alanzoka", <br>
+                        "Peixe (Peixinho)", "Vinni Blogger e Gabriel"). Se tiverem <br>
+                        oportunidade para assistir, eu também recomendo, acho bem <br>
+                        legal eles.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="sections">
+            <h2 class="sectionsTitulo">Verdão 💚</h2>
+            <div class="divafinal">
+                <div>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/i1KbQOtwqZg?si=bDQVugaQDX5xvyAy"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Z8YtuRj5p20?si=7XSgjRY2Y2unfaYL"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/urkuHAqwgFc?si=r6jbX__pDCPBMIzw"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div>
+                    <p id="p">
+                        Aqui o Verdão (Palmeiras). Sou torcedor desse grande time <br>
+                        desde pequeninho e tenho orgulho de acompanhar, sem contar <br>
+                        o Allianz né, que estádio, ir lá é sempre uma sensação muito <br>
+                        boa!
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="sections">
+            <h2 class="sectionsTitulo">Metallica 🤘🏻</h2>
+            <div class="divafinal">
+                <div>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Mt5MCfJ5tZQ?si=lxx_W58F-uNXSmZv"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/fuojtPPpsLg?si=4mlOYlpSECfMyU4M"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/912EG0VhCmk?si=WkzOO3ZaWQNl5II7"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div>
+                    <p id="p2">
+                        Aqui uns das músicas tocadas nos grandes shows que o metallica <br>
+                        faz. É uma experiência única e pretendo ir em algum dia, <br>
+                        no dia que eu ir vai ser uma emoção enorme, ver o Hetfield <br>
+                        e o Kirk no mesmo estádio que eu, eu enlouqueceria kkkkkk
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <ul class="box-redes-sociais">
+            <li class="instagram">
+                <a target="_blank" href="https://www.instagram.com/itzz_igor.7/"><i
+                        class="fab fa-instagram icon"></i></a>
+            </li>
+
+            <li class="snapchat">
+                <a href="https://www.snapchat.com/add/itzz_igor7"><i class="fab fa-snapchat icon"></i></a>
+            </li>
+
+            <li class="github">
+                <a href="https://github.com/IgorQuinto5"><i class="fab fa-github icon"></i></a>
+            </li>
+        </ul>
+        <a href="Netflix/index.html" id="a-back">
+            <button id="back" title="Voltar">Voltar</button>
+        </a>
+    </main>
+
+    <footer>
+        <div class="Menu">
+            <p id="pDoFooter">&copy; O maior Quinto Quinto do Mundo</p>
         </div>
-        <div class="profile Patrícia" data-user="Patrícia"><span>😎</span>
-            <div class="profile-label">Patrícia</div>
-        </div>
-        <div class="profile Igor" data-user="Igor"><span>😁</span>
-            <div class="profile-label">Igor</div>
-        </div>
-        <div class="profile Arthur" data-user="Arthur"><span>😃</span>
-            <div class="profile-label">Arthur</div>
-        </div>
-        <div class="profile Convidado" data-user="Convidado"><span>🙂</span>
-            <div class="profile-label">Convidado</div>
-        </div>
-    </div>
-
-    <div id="modal">
-        <div class="box">
-            <button class="close" title="Fechar">&times;</button>
-            <h2 id="modal-title" data-pt="Digite sua senha" data-en="Enter your password">Digite sua senha</h2>
-            <input type="password" id="modal-password" placeholder="Senha" data-pt-placeholder="Senha"
-                data-en-placeholder="Password" />
-            <button id="modal-submit" data-pt="Entrar" data-en="Sign In">Entrar</button>
-            <div class="error" id="modal-error">Senha incorreta</div>
-        </div>
-    </div>
-
-    <script>
-        const langData = {
-            pt: {
-                h1: "Quem está assistindo? - Entre com 'Germinare' no Igor",
-                modalTitle: "Digite sua senha",
-                placeholder: "Senha",
-                button: "Entrar",
-                error: "Senha incorreta"
-            },
-            en: {
-                h1: "Who's watching? - Enter 'Germinare' on Igor",
-                modalTitle: "Enter your password",
-                placeholder: "Password",
-                button: "Sign In",
-                error: "Incorrect password"
-            }
-        };
-
-        let currentLang = localStorage.getItem("idioma") || "pt";
-        const langBtn = document.getElementById("lang-btn");
-        const errorBox = document.getElementById("modal-error");
-
-        function updateLanguage() {
-            document.querySelector("h1").textContent = langData[currentLang].h1;
-            document.getElementById("modal-title").textContent = langData[currentLang].modalTitle;
-            document.getElementById("modal-password").placeholder = langData[currentLang].placeholder;
-            document.getElementById("modal-submit").textContent = langData[currentLang].button;
-            langBtn.textContent = currentLang === "pt" ? "EN" : "PT";
-
-            // Se erro estiver visível, traduz
-            if (errorBox.style.display === "block") {
-                errorBox.textContent = langData[currentLang].error;
-            }
-        }
-
-        langBtn.addEventListener("click", () => {
-            currentLang = currentLang === "pt" ? "en" : "pt";
-            localStorage.setItem("idioma", currentLang);
-            updateLanguage();
-        });
-
-        updateLanguage();
-
-        // Modal
-        const profiles = document.querySelectorAll('.profile');
-        const modal = document.getElementById('modal');
-        const title = document.getElementById('modal-title');
-        const input = document.getElementById('modal-password');
-        const closeBtn = document.querySelector('#modal .close');
-        let selectedUser = null;
-
-        const passwords = {
-            Jeferson: 'senhaJeferson',
-            'Patrícia': 'senhaPatricia',
-            Igor: 'Germinare',
-            Arthur: 'senhaArthur',
-            Convidado: 'senhaConvidado'
-        };
-
-        profiles.forEach(el => {
-            el.addEventListener('click', () => {
-                selectedUser = el.dataset.user;
-                title.textContent = currentLang === 'pt'
-                    ? `Olá, ${selectedUser}!`
-                    : `Hi, ${selectedUser}!`;
-                input.value = '';
-                errorBox.style.display = 'none';
-                modal.style.display = 'flex';
-                input.focus();
-            });
-        });
-
-        document.getElementById('modal-submit').addEventListener('click', () => {
-            if (input.value === passwords[selectedUser]) {
-                window.location.href = `Trabalho netflix/index.html`;
-            } else {
-                errorBox.textContent = langData[currentLang].error;
-                errorBox.style.display = 'block';
-            }
-        });
-
-        closeBtn.addEventListener('click', () => modal.style.display = 'none');
-        modal.addEventListener('click', e => {
-            if (e.target === modal) modal.style.display = 'none';
-        });
-
-        input.addEventListener('keyup', e => {
-            if (e.key === 'Enter') document.getElementById('modal-submit').click();
-        });
-    </script>
+    </footer>
 </body>
+<script>
+    const toggle = document.getElementById('theme-toggle');
+    toggle.addEventListener('click', () => {
+        document.documentElement.classList.toggle('light-theme');
+        toggle.textContent = document.documentElement.classList.contains('light-theme') ? '🌙' : '🌞';
+    });
+
+    const iframes = [
+        `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7HKRWMTErKh56EIBeFcmdf?utm_source=generator&autoplay=1" width="100%" height="150" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`,
+        `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/018zT8xThRbMH2QeUoMlKQ?utm_source=generator&autoplay=1" width="100%" height="150" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`,
+        `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5anCkDvJ17aznvK5TED5uo?utm_source=generator&autoplay=1" width="100%" height="150" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`,
+        `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1BLfQ6dPXmuDrFmbdfW7Jl?utm_source=generator&autoplay=1" width="100%" height="150" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`,
+        `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7zAt4tdL44D3VuzsvM0N8n?utm_source=generator&autoplay=1" width="100%" height="150" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`,
+        `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2MuWTIM3b0YEAskbeeFE1i?utm_source=generator&autoplay=1" width="100%" height="150" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`,
+        `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3DwQ7AH3xGD9h65ezslm6q?utm_source=generator&autoplay=1" width="100%" height="150" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`,
+        `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6QAsrXPnMSXIbV0yEJHlEX?utm_source=generator&autoplay=1" width="100%" height="150" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`,
+        `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2O7UGwJPVlix15Wn4sa5vw?utm_source=generator&autoplay=1" width="100%" height="150" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`,
+        `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2dXsILW8gzkosqleHAvl0v?utm_source=generator&autoplay=1" width="100%" height="150" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`,
+        `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5lqyqPU3JkpCbUbLmTVQPW?utm_source=generator&autoplay=1" width="100%" height="150" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`,
+        `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5nekfiTN45vlxG0eNJQQye?utm_source=generator&autoplay=1" width="100%" height="150" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`,
+        `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6nswV1Lz3OZkaiCJfmVUOa?utm_source=generator&autoplay=1" width="100%" height="150" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`,
+        `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2R6UrJ8uWbSIiHWmvRQvN8?utm_source=generator&autoplay=1" width="100%" height="150" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`,
+        `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/28WmNsclKsrVmdv3tDmoYU?utm_source=generator&autoplay=1" width="100%" height="150" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`,
+        `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1aXFBWnnPFRKUN7vuIA5h0?utm_source=generator&autoplay=1" width="100%" height="150" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`
+    ];
+
+    const index = Math.floor(Math.random() * iframes.length);
+    document.getElementById("musica-container").innerHTML = iframes[index];
+</script>
 
 </html>

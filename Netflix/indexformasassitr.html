@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-pt="Formas de Assistir - Igorflix" data-en="Ways to Watch - Igorflix">Formas de Assistir - Igorflix</title>
+    <link rel="shortcut icon" href="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/215697c1-f019-46c9-9268-869c8726107c/d77mnay-e06c6eef-e8d7-4b54-9cfd-8b98110395a6.png/v1/fill/w_1280,h_1280/metallica___through_the_never_logo_by_lightsinaugust_d77mnay-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiJcL2ZcLzIxNTY5N2MxLWYwMTktNDZjOS05MjY4LTg2OWM4NzI2MTA3Y1wvZDc3bW5heS1lMDZjNmVlZi1lOGQ3LTRiNTQtOWNmZC04Yjk4MTEwMzk1YTYucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.k0PCCwNUWYcNrgaM3CAQOor1bg6OhPpNZgypl5sziSY" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0f0f0f;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #111;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .language-btn,
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .language-btn {
+            right: 20px;
+            background: transparent;
+            border: 1px solid #aaa;
+            color: #aaa;
+        }
+
+        .back-btn {
+            left: 20px;
+            background: #e50914;
+            border: none;
+            color: white;
+        }
+
+        .back-btn:hover {
+            background-color: #b20710;
+        }
+
+        .container {
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .watch-method {
+            background-color: #1c1c1c;
+            padding: 30px 25px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .watch-method img {
+            width: 80px;
+            height: 80px;
+        }
+
+        .watch-method-text h3 {
+            margin-top: 0;
+            color: #e50914;
+            font-size: 22px;
+        }
+
+        .watch-method-text p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin: 8px 0 0;
+        }
+
+        footer {
+            background-color: #111;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            .watch-method {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .watch-method img {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 data-pt="Formas de Assistir - Igorflix" data-en="Ways to Watch - Igorflix">Formas de Assistir - Igorflix
+        </h1>
+        <button class="back-btn" onclick="window.history.back()" data-pt="Voltar" data-en="Back">Voltar</button>
+        <button class="language-btn" data-pt="Portuguese" data-en="Inglês">English</button>
+    </header>
+
+    <div class="container">
+        <div class="watch-method">
+            <img src="https://cdn-icons-png.flaticon.com/512/2947/2947947.png" alt="TV" />
+            <div class="watch-method-text">
+                <h3 data-pt="Assista na TV" data-en="Watch on TV">Assista na TV</h3>
+                <p data-pt="Use sua Smart TV, Apple TV, Chromecast, Roku ou console de videogame (PS4, PS5, Xbox) para acessar o aplicativo Igorflix e assistir aos conteúdos diretamente na sua televisão."
+                    data-en="Use your Smart TV, Apple TV, Chromecast, Roku, or gaming console (PS4, PS5, Xbox) to access the Igorflix app and watch content directly on your television.">
+                    Use sua Smart TV, Apple TV, Chromecast, Roku ou console de videogame (PS4, PS5, Xbox) para acessar o
+                    aplicativo Igorflix e assistir aos conteúdos diretamente na sua televisão.
+                </p>
+            </div>
+        </div>
+
+        <div class="watch-method">
+            <img src="https://cdn-icons-png.flaticon.com/512/4305/4305652.png" alt="Computer" />
+            <div class="watch-method-text">
+                <h3 data-pt="Assista no Computador" data-en="Watch on Computer">Assista no Computador</h3>
+                <p data-pt="Acesse Igorflix.com em seu navegador favorito (Google Chrome, Firefox, Safari, Edge) para assistir aos filmes e séries sem necessidade de instalar nenhum aplicativo."
+                    data-en="Visit Igorflix.com in your preferred browser (Google Chrome, Firefox, Safari, Edge) to watch movies and shows without needing to install any app.">
+                    Acesse Igorflix.com em seu navegador favorito (Google Chrome, Firefox, Safari, Edge) para assistir
+                    aos filmes e séries sem necessidade de instalar nenhum aplicativo.
+                </p>
+            </div>
+        </div>
+
+        <div class="watch-method">
+            <img src="https://cdn-icons-png.flaticon.com/512/747/747310.png" alt="Mobile" />
+            <div class="watch-method-text">
+                <h3 data-pt="Assista em Dispositivos Móveis" data-en="Watch on Mobile Devices">Assista em Dispositivos
+                    Móveis</h3>
+                <p data-pt="Baixe o aplicativo Igorflix na App Store (iOS) ou Google Play Store (Android) e assista quando e onde quiser com seu smartphone ou tablet."
+                    data-en="Download the Igorflix app on the App Store (iOS) or Google Play Store (Android) and watch anytime, anywhere on your smartphone or tablet.">
+                    Baixe o aplicativo Igorflix na App Store (iOS) ou Google Play Store (Android) e assista quando e
+                    onde quiser com seu smartphone ou tablet.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p data-pt="© 2025 Igorflix. Todos os direitos reservados." data-en="© 2025 Igorflix. All rights reserved.">©
+            2025 Igorflix. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        const langBtn = document.querySelector('.language-btn');
+        let idioma = localStorage.getItem('idioma') || 'pt';
+
+        function atualizarIdioma() {
+            document.querySelectorAll('[data-pt][data-en]').forEach(el => {
+                el.textContent = idioma === 'pt' ? el.getAttribute('data-pt') : el.getAttribute('data-en');
+            });
+            langBtn.textContent = idioma === 'pt' ? langBtn.getAttribute('data-en') : langBtn.getAttribute('data-pt');
+        }
+
+        document.addEventListener('DOMContentLoaded', atualizarIdioma);
+
+        langBtn.addEventListener('click', () => {
+            idioma = idioma === 'pt' ? 'en' : 'pt';
+            localStorage.setItem('idioma', idioma);
+            atualizarIdioma();
+        });
+    </script>
+</body>
+
+</html>

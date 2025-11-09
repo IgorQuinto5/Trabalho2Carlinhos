@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Igorflix - Login</title>
+    <link rel="shortcut icon"
+        href="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/215697c1-f019-46c9-9268-869c8726107c/d77mnay-e06c6eef-e8d7-4b54-9cfd-8b98110395a6.png/v1/fill/w_1280,h_1280/metallica___through_the_never_logo_by_lightsinaugust_d77mnay-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiJcL2ZcLzIxNTY5N2MxLWYwMTktNDZjOS05MjY4LTg2OWM4NzI2MTA3Y1wvZDc3bW5heS1lMDZjNmVlZi1lOGQ3LTRiNTQtOWNmZC04Yjk4MTEwMzk1YTYucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.k0PCCwNUWYcNrgaM3CAQOor1bg6OhPpNZgypl5sziSY"
+        type="image/x-icon">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', sans-serif;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 10%, rgba(0, 0, 0, 0.2) 100%), url('https://images8.alphacoders.com/122/1221911.jpg') no-repeat center center/cover;
+            color: white;
+            display: flex;
+            height: 729px;
+        }
+
+        #langToggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        section {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; /* Quebra de linha */
+            gap: 20px;
+            padding: 20px;
+        }
+
+        section img {
+            max-width: 700px;
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .login-container {
+            background-color: rgba(0, 0, 0, 0.75);
+            padding: 60px 40px 40px;
+            border-radius: 4px;
+            width: 500px;
+            max-width: 400px;
+            margin: 0 auto 40px;
+            position: relative;
+            top: 50px;
+        }
+
+        .login-container h1 {
+            font-size: 32px;
+            margin-bottom: 28px;
+            text-align: center;
+        }
+
+        .login-form input {
+            background: #333;
+            border: none;
+            color: white;
+            padding: 16px;
+            width: 100%;
+            margin-bottom: 16px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .login-form button {
+            background: #e50914;
+            color: white;
+            border: none;
+            padding: 16px;
+            font-size: 16px;
+            border-radius: 4px;
+            width: 100%;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .login-form button:hover {
+            background: #f6121d;
+        }
+
+        #notificacao {
+            display: none;
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #e50914;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 4px;
+            font-size: 14px;
+            z-index: 999; /* Faz ficar a frente de elementos de menores valores */
+            display: flex;
+            align-items: center;
+        }
+
+        #notificacao button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 18px;
+            margin-left: 16px;
+            cursor: pointer;
+        }
+
+        #ArmazenarSections {
+            display: flex;
+            justify-content: space-around;
+        }
+
+
+        .login-container {
+            padding: 40px 20px 30px;
+        }
+
+        #langToggle {
+            top: 10px;
+            right: 10px;
+            padding: 6px 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button id="langToggle">EN</button>
+
+    <div id="ArmazenarSections">
+        <section>
+            <img src="https://strangerthings-experience.com/assets/img/_hero.jpg" alt="Stranger Things" width="500"
+                height="250">
+            <img src="https://s2.glbimg.com/Y_WmT-o3hZiJ39SDjjhMQX_ked0=/s.glbimg.com/og/rg/f/original/2014/09/01/princ_1.jpg"
+                alt="Prince" width="500" height="280">
+        </section>
+
+        <div>
+            <div class="login-container" id="loginBox">
+                <h1 data-pt="Login Igorflix" data-en="Igorflix Login">Login Igorflix</h1>
+                <div class="login-form">
+                    <input type="text" id="Nome" placeholder="Nome Completo" data-pt-placeholder="Nome Completo"
+                        data-en-placeholder="Full Name">
+                    <input type="email" id="Email" placeholder="E-mail" data-pt-placeholder="E-mail"
+                        data-en-placeholder="E-mail">
+                    <input type="tel" id="Telefone" placeholder="Telefone" data-pt-placeholder="Telefone"
+                        data-en-placeholder="Phone">
+                    <input type="password" id="Senha" placeholder="Senha" data-pt-placeholder="Senha"
+                        data-en-placeholder="Password">
+                    <button onclick="validarLogin()" data-pt="Entrar" data-en="Sign In">Entrar</button>
+                </div>
+            </div>
+
+            <section>
+                <img src="IGORFLIX-01-05-2025.png" alt="Banner Igorflix" width="450" height="300">
+            </section>
+        </div>
+
+        <section>
+            <img src="https://ogimg.infoglobo.com.br/in/23590651-113-18d/FT1086A/game-of-thrones.jpg"
+                alt="Game of Thrones" width="450" height="300">
+            <img src="https://s2-techtudo.glbimg.com/EENDLEkyMXU6LWhEdmijAUqGEGY=/0x0:1200x720/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2023/q/d/ldEiF8QpKR5BnC2BbYeA/atraves-da-minha-janela-alem-mar-2023.jpg"
+                alt="Through My Window" width="450" height="320">
+        </section>
+    </div>
+    <div id="notificacao"></div>
+
+    <script>
+        // Função para aplicar traduções em toda a página
+        function aplicarTraducoes() {
+            document.querySelectorAll("[data-pt-placeholder]").forEach(el => {
+                const key = currentLang === "pt" ? "pt" : "en";
+                el.placeholder = el.getAttribute(`data-${key}-placeholder`);
+            });
+            document.querySelectorAll("[data-pt]").forEach(el => {
+                const key = currentLang === "pt" ? "pt" : "en";
+                el.textContent = el.getAttribute(`data-${key}`);
+            });
+            langToggle.textContent = currentLang === "pt" ? "EN" : "PT";
+        }
+
+        // Lê o idioma armazenado ou inicia em português
+        let currentLang = localStorage.getItem('lang') || 'pt';
+        const langToggle = document.getElementById("langToggle");
+
+        document.addEventListener("DOMContentLoaded", () => {
+            aplicarTraducoes();
+
+            // Se já estiver logado, redireciona
+            if (localStorage.getItem('metallicoUser')) {
+                window.location.href = "indexcontass.html";
+            }
+        });
+
+        // Toggle de idioma
+        langToggle.addEventListener("click", () => {
+            currentLang = currentLang === "pt" ? "en" : "pt";
+            localStorage.setItem('lang', currentLang);
+            aplicarTraducoes();
+        });
+
+        // Função de tradução auxiliar (para notificações)
+        function getText(ptText, enText) {
+            return currentLang === "pt" ? ptText : enText;
+        }
+
+        // Validação de login
+        function validarLogin() {
+            const nome = document.getElementById("Nome").value.trim();
+            const email = document.getElementById("Email").value.trim().toLowerCase();
+            const telefone = document.getElementById("Telefone").value.replace(/\D/g, "");
+            const senha = document.getElementById("Senha").value;
+
+            if (nome === "Igor Eduardo Quinto" &&
+                email === "igor.quinto.germinare@gmail.com" &&
+                telefone === "5511981062518" &&
+                senha === "Germinare") {
+
+                localStorage.setItem('metallicoUser', JSON.stringify({ nome, email, telefone, senha }));
+                window.location.href = "indexcontass.html";
+            } else {
+                exibirNotificacao(
+                    getText("Credenciais inválidas!", "Invalid credentials!"),
+                    "error"
+                );
+            }
+        }
+
+        // Exibição de notificação
+        function exibirNotificacao(msg, tipo) {
+            const notif = document.getElementById("notificacao");
+            notif.style.backgroundColor = tipo === "error" ? "#e50914" : "#28a745";
+            notif.innerHTML = `
+                <span>${msg}</span>
+                <button onclick="this.parentElement.style.display='none'">×</button>`;
+            notif.style.display = "flex";
+            setTimeout(() => notif.style.display = "none", 3000);
+        }
+    </script>
+</body>
+
+</html>
