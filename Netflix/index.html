@@ -177,7 +177,7 @@
         <div class="logo">IGORFLIX</div>
     </header>
 
-    <button id="lang-btn">EN</button>
+    <button id="lang-btn" data-pt="EN" data-en="PT">PT</button>
 
     <h1 data-pt="Quem está assistindo?" data-en="Who's watching?">Quem está assistindo?</h1>
 
@@ -230,11 +230,13 @@
         // Dados de tradução
         const langData = {
             pt: {
+                button: "EN",
                 h1: "Quem está assistindo?",
                 manageProfiles: "Gerenciar Perfis",
                 profileSelected: "Perfil selecionado: "
             },
             en: {
+                button: "PT",
                 h1: "Who's watching?",
                 manageProfiles: "Manage Profiles",
                 profileSelected: "Profile selected: "
@@ -249,6 +251,7 @@
         // Atualizar idioma da página
         function updateLanguage() {
             document.querySelector("h1").textContent = langData[currentLang].h1;
+            document.querySelector("button").textContent = langData[currentLang].button;
             document.querySelector(".manage-profiles").textContent = langData[currentLang].manageProfiles;
             langBtn.textContent = currentLang === "pt" ? "EN" : "PT";
         }
